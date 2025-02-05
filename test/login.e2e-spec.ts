@@ -122,6 +122,12 @@ describe('AuthController (E2E)', () => {
       const response = await request(app.getHttpServer()).get('/auth/users');
       expect(response.status).toBe(401);
     });
+    it('should fail if the JWT Provided is invalid', async () => {
+      const usersResponse = await request(app.getHttpServer())
+        .get('/auth/users')
+        .set('Authorization', `Bearer INVALIDJWTTOKEN`);
+      expect(usersResponse.status).toBe(401);
+    });
 
     it('should return all users', async () => {
       await request(app.getHttpServer()).post('/auth/register').send({
