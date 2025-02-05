@@ -6,6 +6,7 @@ Deployeado en: https://conexa-backend-challenge.onrender.com (Puede tardar unos 
 Utilizando Render y MongoDB Atlas.
 
 Swagger disponible en https://conexa-backend-challenge.onrender.com/api
+
 ## Setup del proyecto
 
 Copiar .env.example a .env
@@ -14,7 +15,7 @@ Copiar .env.example a .env
 $ npm install
 ```
 
-## Compile and run the project
+## Compilar y correr el proyecto
 
 Para probar de forma local, levantar el container de MongoDB utilizando docker compose.
 
