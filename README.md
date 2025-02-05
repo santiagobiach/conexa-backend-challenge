@@ -19,7 +19,7 @@ El módulo de Login es el único que tiene un controller, que acepta pedidos en:
 
 Luego de las validaciones pertinentes (Para garantizar que los body de las request son correctos), y de ser necesario realizar la autenticación (mediante una Auth Guard que se comunica con el módulo JWT), el Login Controller se comunicara con el Login Service. Este se encargara de verificar que, por ejemplo, este disponible el mail utilizado por un nuevo usuario. Se comunica tanto con el Database Service, que actua como una abstracción sobre la base de datos, y también con el Business Service, que es quien se encarga de manejar la lógica de negocio.
 
-El módulo de configuración se encarga de otorgar las variables de entorno tanto al Módulo JWT cómo al módulo de Mongoose, que con quien se comunica el Database Service para tener acceso a la base de datos de MongoDB.
+El módulo de configuración se encarga de otorgar las variables de entorno tanto al Módulo JWT cómo al módulo de Mongoose, que es con quien se comunica el Database Service para tener acceso a la base de datos de MongoDB. El módulo JWT se encarga de crear y firmar los JWT otorgados al usuario cuando hace login, y de validarlo en los endpoints protegidos mediante una Guard.
 
 ### Otra posible implementación
 También era viable utilizar los llamados micro servicios de nest (NestFactory.createMicroservice<MicroserviceOptions>), y realizar el setup de un monorepo.
