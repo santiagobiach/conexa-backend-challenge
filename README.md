@@ -1,8 +1,11 @@
 ## Descripción
 
 Resolución del challenge para backend de Conexa.
-Deployeado en: https://conexa-backend-challenge.onrender.com/api (Puede tardar unos 50 segundos en arrancar por el cold start que tiene el free tier)
-Utilizando render y MongoDB Atlas.
+
+Deployeado en: https://conexa-backend-challenge.onrender.com (Puede tardar unos 50 segundos en arrancar por el cold start que tiene el free tier)
+Utilizando Render y MongoDB Atlas.
+
+Swagger disponible en https://conexa-backend-challenge.onrender.com/api
 ## Setup del proyecto
 
 Copiar .env.example a .env
